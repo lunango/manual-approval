@@ -102,12 +102,6 @@ func approvalFromComments(comments []*github.IssueComment, approvers []string, m
 	}
 
 	for _, comment := range comments {
-		commentUser := comment.User.GetLogin()
-		approverIdx := approversIndex(remainingApprovers, commentUser)
-		if approverIdx < 0 {
-			continue
-		}
-
 		commentBody := comment.GetBody()
 		isApprovalComment, err := isApproved(commentBody)
 		if err != nil {
