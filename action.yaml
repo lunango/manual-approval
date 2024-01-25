@@ -4,9 +4,6 @@ branding:
   icon: pause
   color: yellow
 inputs:
-  approvers:
-    description: Required approvers
-    required: true
   secret:
     description: Secret
     required: true
